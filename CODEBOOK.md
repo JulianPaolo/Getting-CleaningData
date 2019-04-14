@@ -1,41 +1,91 @@
 #CODEBOOK
 
-The raw data set contains the ff: 
-'features_info.txt': Shows information about the variables used on the feature vector.
-'features.txt': List of all features.
-'activity_labels.txt': Links the class labels with their activity name.
-'train/X_train.txt': Training set.
-'train/y_train.txt': Training labels.
-'test/X_test.txt': Test set.
-'test/y_test.txt': Test labels.
-'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+The data set is consisted of theexperiments that have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-The goal of the project is to merge these data sets into one consolidated data set, which in our case is the tidy data set. 
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-The variable description are as follows:
- 'features_info.txt': Shows information about the variables used on the feature vector.
+The subject ids are from 0 to 30 with the different activities namely as; WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 
-- 'features.txt': List of all features.
 
-- 'activity_labels.txt': Links the class labels with their activity name.
+There are also Time Domain Measurements namely;
+timeDomainBodyAccelerometer-Mean-X
+timeDomainBodyAccelerometer-Mean-Y
+timeDomainBodyAccelerometer-Mean-Z
+timeDomainBodyAccelerometer-StandardDeviation-X
+timeDomainBodyAccelerometer-StandardDeviation-Y
+timeDomainBodyAccelerometer-StandardDeviation-Z
+timeDomainGravityAccelerometer-Mean-X
+timeDomainGravityAccelerometer-Mean-Y
+timeDomainGravityAccelerometer-Mean-Z
+timeDomainGravityAccelerometer-StandardDeviation-X
+timeDomainGravityAccelerometer-StandardDeviation-Y
+timeDomainGravityAccelerometer-StandardDeviation-Z
+timeDomainBodyAccelerometerJerk-Mean-X
+timeDomainBodyAccelerometerJerk-Mean-Y
+timeDomainBodyAccelerometerJerk-Mean-Z
+timeDomainBodyAccelerometerJerk-StandardDeviation-X
+timeDomainBodyAccelerometerJerk-StandardDeviation-Y
+timeDomainBodyAccelerometerJerk-StandardDeviation-Z
+timeDomainBodyGyroscope-Mean-X
+timeDomainBodyGyroscope-Mean-Y
+timeDomainBodyGyroscope-Mean-Z
+timeDomainBodyGyroscope-StandardDeviation-X
+timeDomainBodyGyroscope-StandardDeviation-Y
+timeDomainBodyGyroscope-StandardDeviation-Z
+timeDomainBodyGyroscopeJerk-Mean-X
+timeDomainBodyGyroscopeJerk-Mean-Y
+timeDomainBodyGyroscopeJerk-Mean-Z
+timeDomainBodyGyroscopeJerk-StandardDeviation-X
+timeDomainBodyGyroscopeJerk-StandardDeviation-Y
+timeDomainBodyGyroscopeJerk-StandardDeviation-Z
+timeDomainBodyAccelerometerMagnitude-Mean
+timeDomainBodyAccelerometerMagnitude-StandardDeviation
+timeDomainGravityAccelerometerMagnitude-Mean
+timeDomainGravityAccelerometerMagnitude-StandardDeviation
+timeDomainBodyAccelerometerJerkMagnitude-Mean
+timeDomainBodyAccelerometerJerkMagnitude-StandardDeviation
+timeDomainBodyGyroscopeMagnitude-Mean
+timeDomainBodyGyroscopeMagnitude-StandardDeviation
+timeDomainBodyGyroscopeJerkMagnitude-Mean
+timeDomainBodyGyroscopeJerkMagnitude-StandardDeviation
+Frequency Domain Measurements
+frequencyDomainBodyAccelerometer-Mean-X
+frequencyDomainBodyAccelerometer-Mean-Y
+frequencyDomainBodyAccelerometer-Mean-Z
+frequencyDomainBodyAccelerometer-StandardDeviation-X
+frequencyDomainBodyAccelerometer-StandardDeviation-Y
+frequencyDomainBodyAccelerometer-StandardDeviation-Z
+frequencyDomainBodyAccelerometer-MeanFrequency-X
+frequencyDomainBodyAccelerometer-MeanFrequency-Y
+frequencyDomainBodyAccelerometer-MeanFrequency-Z
+frequencyDomainBodyAccelerometerJerk-Mean-X
+frequencyDomainBodyAccelerometerJerk-Mean-Y
+frequencyDomainBodyAccelerometerJerk-Mean-Z
+frequencyDomainBodyAccelerometerJerk-StandardDeviation-X
+frequencyDomainBodyAccelerometerJerk-StandardDeviation-Y
+frequencyDomainBodyAccelerometerJerk-StandardDeviation-Z
+frequencyDomainBodyAccelerometerJerk-MeanFrequency-X
+frequencyDomainBodyAccelerometerJerk-MeanFrequency-Y
+frequencyDomainBodyAccelerometerJerk-MeanFrequency-Z
+frequencyDomainBodyGyroscope-Mean-X
+frequencyDomainBodyGyroscope-Mean-Y
+frequencyDomainBodyGyroscope-Mean-Z
+frequencyDomainBodyGyroscope-StandardDeviation-X
+frequencyDomainBodyGyroscope-StandardDeviation-Y
+frequencyDomainBodyGyroscope-StandardDeviation-Z
+frequencyDomainBodyGyroscope-MeanFrequency-X
+frequencyDomainBodyGyroscope-MeanFrequency-Y
+frequencyDomainBodyGyroscope-MeanFrequency-Z
+frequencyDomainBodyAccelerometerMagnitude-Mean
+frequencyDomainBodyAccelerometerMagnitude-StandardDeviation
+frequencyDomainBodyAccelerometerMagnitude-MeanFrequency
+frequencyDomainBodyBodyAccelerometerJerkMagnitude-Mean
+frequencyDomainBodyBodyAccelerometerJerkMagnitude-StandardDeviation
+frequencyDomainBodyBodyAccelerometerJerkMagnitude-MeanFrequency
+frequencyDomainBodyBodyGyroscopeMagnitude-Mean
+frequencyDomainBodyBodyGyroscopeMagnitude-StandardDeviation
+frequencyDomainBodyBodyGyroscopeMagnitude-MeanFrequency
+frequencyDomainBodyBodyGyroscopeJerkMagnitude-Mean
+frequencyDomainBodyBodyGyroscopeJerkMagnitude-StandardDeviation
+frequencyDomainBodyBodyGyroscopeJerkMagnitude-MeanFrequency
 
-- 'train/X_train.txt': Training set.
-
-- 'train/y_train.txt': Training labels.
-
-- 'test/X_test.txt': Test set.
-
-- 'test/y_test.txt': Test labels.
-
-The following files are available for the train and test data. Their descriptions are equivalent. 
-
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-
-- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-
-- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-
-- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
